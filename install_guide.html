@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Инструкция по установке конфига / Config Installation Guide</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 40px auto;
+            max-width: 800px;
+            color: #111;
+            line-height: 1.5;
+            background-color: #fff;
+        }
+        h1 {
+            font-size: 22px;
+            text-align: center;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 15px;
+            margin-bottom: 25px;
+            color: #333;
+        }
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            border-bottom: 2px solid #000;
+            padding-bottom: 4px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        .step-title {
+            font-weight: bold;
+            font-size: 15px;
+            margin-top: 12px;
+            margin-bottom: 4px;
+        }
+        p {
+            margin: 0 0 8px 0;
+            font-size: 14px;
+        }
+        ul {
+            margin: 5px 0 15px 20px;
+            padding: 0;
+            font-size: 14px;
+        }
+        li {
+            margin-bottom: 4px;
+        }
+        code {
+            background-color: #f0f0f0;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: Consolas, monospace;
+            font-size: 13px;
+        }
+        .notes-title {
+            font-weight: bold;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Инструкция по установке конфига / Config Installation Guide</h1>
+    <div class="subtitle">Использование скрипта быстрой установки и сброса <b>INSTALL_DEK0CFG.bat</b></div>
+
+    <!-- РУССКАЯ ВЕРСИЯ -->
+    <div class="section-title">Русская версия</div>
+
+    <div class="step-title">Шаг 1. Сброс старого конфига и кэша CS2</div>
+    <p>Запусти скрипт <code>INSTALL_DEK0CFG.bat</code> и выбери пункт <b>1</b>. Скрипт откроет папку <code>userdata</code>, покажет твой активный Steam ID и после ввода цифр очистит старый кэш (папку 730).</p>
+
+    <div class="step-title">Шаг 2. Автоматическая установка конфига</div>
+    <p>В главном меню скрипта выбери пункт <b>2</b>. Скрипт сам найдет CS2 на любых дисках (C:, D:, E:, F:) и автоматически скопирует файл <code>dek0.cfg</code> в нужную папку <code>cfg</code>.</p>
+
+    <div class="step-title">Шаг 3. Включи консоль разработчика</div>
+    <p>В игре: Настройки &rarr; Игра &rarr; Включить консоль разработчика &rarr; Да.</p>
+
+    <div class="step-title">Шаг 4. Загрузи конфиг в игре</div>
+    <p>Открой консоль клавишей <code>~</code> (тильда) и введи команду: <code>exec dek0.cfg</code><br>Нажми Enter &mdash; конфиг применится моментально.</p>
+
+    <div class="step-title">Шаг 5 (по желанию). Автозагрузка при запуске</div>
+    <p>Чтобы конфиг подгружался автоматически при каждом запуске: ПКМ по CS2 в Steam &rarr; Свойства &rarr; Общие &rarr; Параметры запуска и добавь: <code>+exec dek0.cfg</code></p>
+
+    <div class="notes-title">Важные заметки:</div>
+    <ul>
+        <li>Файл <code>INSTALL_DEK0CFG.bat</code> берет всю рутину на себя и автоматически находит Steam и CS2.</li>
+        <li>Конфиг <code>dek0.cfg</code> должен лежать в одной папке с батником при запуске автоустановки.</li>
+        <li>Команда активации вводится без пробелов и с расширением: <code>exec dek0.cfg</code>.</li>
+    </ul>
+
+    <!-- ENGLISH VERSION -->
+    <div class="section-title">English version</div>
+
+    <div class="step-title">Step 1. Reset Old Config and Cache</div>
+    <p>Run the <code>INSTALL_DEK0CFG.bat</code> script and select option <b>1</b>. It will open your <code>userdata</code> folder, display your Active Steam ID, and clean up broken CS2 cache (folder 730).</p>
+
+    <div class="step-title">Step 2. Auto-Install Config to CS2</div>
+    <p>Select option <b>2</b> in the main menu. The script will automatically locate your CS2 installation across all drives and copy <code>dek0.cfg</code> directly into the <code>cfg</code> folder.</p>
+
+    <div class="step-title">Step 3. Enable Developer Console</div>
+    <p>In-game: Settings &rarr; Game &rarr; Enable Developer Console &rarr; Yes.</p>
+
+    <div class="step-title">Step 4. Load Config Manually</div>
+    <p>Open console using the <code>~</code> key and enter: <code>exec dek0.cfg</code><br>Press Enter &mdash; all settings will be applied instantly.</p>
+
+    <div class="step-title">Step 5 (optional). Auto-load on Launch</div>
+    <p>To automatically load the config every time you play: Right-click CS2 in Steam &rarr; Properties &rarr; General &rarr; Launch Options and append: <code>+exec dek0.cfg</code></p>
+
+    <div class="notes-title">Important Notes:</div>
+    <ul>
+        <li>Using <code>INSTALL_DEK0CFG.bat</code> eliminates the need to manually search for your Steam path or CS2 directory.</li>
+        <li>Make sure <code>dek0.cfg</code> is placed in the same folder as the <code>.bat</code> file before running auto-install.</li>
+        <li>The load command must be typed exactly as shown: <code>exec dek0.cfg</code>.</li>
+    </ul>
+
+</body>
+</html>
